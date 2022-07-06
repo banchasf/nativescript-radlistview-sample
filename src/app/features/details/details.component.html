@@ -1,0 +1,16 @@
+<ActionBar title="RadListView Detail"></ActionBar>
+
+<ScrollView height="100%">
+    <StackLayout height="100%">
+        <StackLayout height="100%">
+            <RadListView [autoReuseViews]="true" [items]="dataItems">
+                <ng-template tkListItemTemplate let-item="item">
+                    <StackLayout>
+                        <Label class="nameLabel" [text]="item.name"></Label>
+                        <Label class="descriptionLabel" [text]="item.description"></Label>
+                    </StackLayout>
+                </ng-template>
+            </RadListView>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>
