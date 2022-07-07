@@ -1,5 +1,8 @@
-import {Component} from "@angular/core";
+import {Component, ElementRef, HostListener, ViewChild} from "@angular/core";
 import {ObservableArray} from "@nativescript/core";
+import {RadListView} from "nativescript-ui-listview";
+import {Label} from "@nativescript/core";
+
 
 @Component({
   moduleId: module.id,
@@ -7,14 +10,17 @@ import {ObservableArray} from "@nativescript/core";
   templateUrl: "details.component.html"
 })
 export class DetailsComponent {
-  _dataItems: ObservableArray<any>;
+  _dataItems: any;
+  @ViewChild('radListViewComponent', { static: false }) radListView: ElementRef<RadListView>;
+  @ViewChild('label2', {static: false}) label2: ElementRef<Label>;
+  @ViewChild('label1', {static: false}) label1: ElementRef<Label>;
 
   get dataItems(): ObservableArray<any> {
     return this._dataItems;
   }
 
   ngOnInit(): void {
-    const items = [
+    this._dataItems = new ObservableArray([
       {
         "name": "Mr. A",
         "description": "Person #1"
@@ -22,11 +28,21 @@ export class DetailsComponent {
       {
         "name": "Mr. B",
         "description": "Person #2"
-      }];
-    this._dataItems = new ObservableArray(items);
-  }
+      }]);
 
-  ngOnDestroy() {
+  }
+  @HostListener('unloaded')
+  destroy() {
+
     console.log('Destroy details view');
+    this.radListView.nativeElement
+      .removeEventListener(RadListView.itemLoadingEvent +"," +
+        RadListView.loadedEvent +","+
+        RadListView.loadMoreDataRequestedEvent
+      );
+    this.radListView.nativeElement.disposeNativeView();
+    this.label1.nativeElement.disposeNativeView();
+    this.label2.nativeElement.disposeNativeView();
+
   }
 }

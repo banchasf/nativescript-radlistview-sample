@@ -10,5 +10,10 @@ export default {
   },
   cli: {
     packageManager: 'npm'
+  },
+  ios: {
+    gcThrottleTime: 100,
+    memoryCheckInterval: 100,
+    freeMemoryRatio: 0.2,
   }
 } as NativeScriptConfig;
