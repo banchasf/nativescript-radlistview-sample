@@ -1,0 +1,14 @@
+@import 'app-common';
+@import '~nativescript-theme-core/scss/platforms/index.android';
+
+// Place any CSS rules you want to apply only on Android here
+
+.action-bar-item {
+    color: $header-fg-color;
+    background-color: $header-bg-color;
+    border: 0px;
+    border-color: $header-bg-color;
+    padding: 5;
+    width:50vh;
+    height:50vh;
+}

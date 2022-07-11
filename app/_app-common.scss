@@ -1,0 +1,1418 @@
+ // Import the theme’s variables. If you’re using a color scheme
+// other than “light”, switch the path to the alternative scheme,
+// for example '~nativescript-theme-core/scss/dark'.
+@import '~nativescript-theme-core/scss/light';
+
+// Customize any of the theme’s variables here, for instance $btn-color: red;
+$btn-color-outline-highlighted: #0000FF;
+$border-color: #0085ef;
+
+$primary-bg-color:  #0085ef;
+$primary-fg-color: #fff;
+
+$disabled-bg-color: #f7f8fa;
+$disabled-fg-color: #67717d;
+
+$tetradic1-bg-color: #636363;
+$tetradic1-fg-color: #46ff97;
+$tetradic2-bg-color: $primary-bg-color;
+$tetradic2-fg-color: $primary-fg-color;
+$tetradic3-bg-color: #ff46ae;
+$tetradic3-fg-color: #000;
+$tetradic4-bg-color: #0069bc;
+$tetradic4-fg-color: #fff;
+
+$split1-bg-color: #78c7cd;
+$split1-fg-color: #000;
+$split2-bg-color: $primary-bg-color;
+$split2-fg-color: $primary-fg-color;
+$split3-bg-color: #ff4652;
+$split3-fg-color: white;
+
+$analogous3-bg-color: #aaa;
+$analogous3-fg-color: white;
+
+$complementary-bg-color: $tetradic4-bg-color;
+$complementary-fg-color: $tetradic4-fg-color;
+
+$header-bg-color: #555;
+$header-fg-color: $primary-fg-color;
+
+$header-bg-color-2: #636363;
+$header-fg-color-2: $tetradic3-bg-color;
+
+$disabled-text: #666666;
+$text: #333333;
+
+$merx-color-1:#a68ac0;
+$merx-color-2:#2D85FD;
+$merx-color-3:#479cd6;
+$merx-color-4:#5abe7f;
+$merx-color-5:#de4242;
+
+
+// Import the theme’s main ruleset.
+@import '~nativescript-theme-core/scss/index';
+
+// Place any CSS rules you want to apply on both iOS and Android here.
+// This is where the vast majority of your CSS code goes.
+
+// StackLayout {
+//     border-color: red;
+//     border-width: 1;
+// }
+
+// GridLayout {
+//     border-color: blue;
+//     border-width: 1;
+// }
+
+Tabs TabStrip {
+    background-color: $analogous3-bg-color;
+    color: $analogous3-fg-color;
+    highlight-color: #ff4652;
+}
+
+Tabs TabStrip TabStripItem Label {
+    color: $analogous3-fg-color;
+}
+
+ActionBar {
+    background-color: $header-bg-color;
+    color: $header-fg-color;
+    //padding-right: 30px
+}
+
+Label, Button {
+    color:#303030;
+    font-family: "Roboto";
+    font-size: 14;
+}
+
+.header-panel {
+    background: $merx-color-2
+}
+
+.calendar-header-panel {
+    background: #4974a5;
+}
+
+.dialog-header-panel {
+    @extend .header-panel;
+    background-color: $merx-color-1;
+    //background: linear-gradient(90deg, $merx-color-3, $merx-color-1);
+
+}
+
+.header-panel Label {
+    color: $tetradic4-fg-color;
+}
+
+.calendar-header-panel Label {
+    color: $tetradic4-fg-color;
+}
+
+.dialog-header-panel Label {
+    color: #fff;
+}
+
+.hr {
+    border-bottom-width: 1;
+    border-bottom-color: #f4f4f4;
+}
+
+.fa {
+    font-family: 'Font Awesome 5 Free', 'fa-regular-400';
+    font-weight: 400;
+}
+
+.fab {
+    font-family: 'Font Awesome 5 Brands', 'fa-brands-400';
+    font-weight: 400;
+}
+
+.fas {
+    font-family: 'Font Awesome 5 Free', 'fa-solid-900';
+    font-weight: 900;
+}
+
+.mdi {
+    font-family: "Material Icons", "MaterialIcons-Regular";
+    font-weight: 400;
+}
+
+.profilePic {
+    border-style: solid;
+    border-color: #303030;
+    border-width: 1px;
+}
+
+#todaySummaryBar {
+    background-color: #1A237E;
+}
+
+.storeGridCellBottom {
+    border-bottom-width: 1px;
+    border-bottom-color: #979797;
+    border-bottom-style: solid;
+}
+
+.storeGridCellLeft {
+    border-left-width: 1px;
+    border-left-color: #979797;
+    border-left-style: solid;
+}
+
+.todayVisit {
+    border-radius: 5%;
+    background-color: #fff;
+    padding: 10;
+    margin-left: 10;
+    margin-right: 10;
+    margin-top: 8;
+    margin-bottom: 8;
+}
+
+.addVisitGrid {
+    border-bottom-width: 1px;
+    border-bottom-color: #979797;
+    border-bottom-style: solid;
+}
+
+.selectedAddVisitGrid {
+    border-bottom-width: 1px;
+    border-bottom-color: #979797;
+    border-bottom-style: solid;
+}
+
+.storeTitle {
+    background-color:black;
+    color:white;
+    font-size: 14pt;
+}
+
+.btn-primary {
+    background-color:#0085ef;
+    color:white;
+    z-index: 0;
+}
+
+.merx-btn-outline {
+    // android-elevation: 4;
+    background-color: #246ACA;
+    border-color: #246ACA;
+    color:#fff;
+    z-index: 0;
+    text-transform: capitalize;
+}
+
+.merx-btn-special-1 {
+    // android-elevation: 4;
+    background-color: $merx-color-1;
+    border-color: $merx-color-1;
+    color:#fff;
+    z-index: 0;
+    font-size: 12;
+    text-transform: capitalize;
+}
+
+.merx-btn-special-2 {
+    // android-elevation: 4;
+    background-color: $merx-color-4;
+    border-color: $merx-color-4;
+    color:#fff;
+    z-index: 0;
+    font-size: 12;
+    text-transform: capitalize;
+}
+
+
+.merx-btn-outline-secondary {
+    // android-elevation: 4;
+    background-color: #eee;
+    color:#777;
+    z-index: 0;
+    text-transform: capitalize;
+}
+
+.merx-sub-btn-outline {
+    // android-elevation: 4;
+    background-color:#d4e0e9;
+    color:#0085ef;
+    z-index: 0;
+    text-transform: capitalize;
+}
+
+.merx-sub-btn-outline-secondary {
+    // android-elevation: 4;
+    background-color: #eee;
+    color:#777;
+    z-index: 0;
+    text-transform: capitalize;
+}
+
+
+.btn-white {
+    background-color:white;
+    color:#479cd6;
+}
+
+.btn-transparent-active {
+    color:#479cd6;
+    background-color: transparent;
+}
+
+.btn-transparent-disabled {
+    color:#f4f4f4 !important;
+    background-color: transparent;
+}
+
+.label-primary {
+    background-color:#0085ef;
+    color:white;
+}
+
+.label-secondary {
+    color:#0085ef;
+    background-color:white;
+}
+
+.label-inactive {
+    color: #777;
+    border-color: #ccc;
+    border-width: 0.5;
+    background-color: #ccc;
+}
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+.blue {
+    //color:#3F61B5;
+    color: #46aeff;
+}
+
+.orange {
+    color: #ff9746;
+}
+
+.orange-bg {
+    background-color: #ff9746;
+}
+
+.green {
+    color: $merx-color-4;
+}
+
+.green-bg {
+    background-color: $merx-color-4;
+}
+
+.gray {
+    color:$disabled-fg-color;
+}
+
+.dark-gray {
+    color: $disabled-bg-color;
+}
+
+.light-gray {
+    color: $disabled-fg-color;
+}
+
+.alt-light-gray {
+    color: #a5a4a4;
+}
+
+.dark-blue {
+    color: #1a237e; // monochrome-0
+}
+
+.blue-bg {
+    background-color:#46aeff; // monochrome-2
+}
+
+.dark-blue-bg {
+    background-color: #0085ef; // monochrome-1
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.dark-gray-bg {
+    background-color:#cccccc;
+}
+
+.black-bg {
+    background-color:#303030;
+}
+
+.gray-bg {
+    background-color:#aaa;
+}
+
+.light-gray-bg {
+    background-color:#f4f4f4;
+}
+
+.light-grey {
+    color: #F4F4F4;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-24 {
+    font-size: 24;
+}
+
+.font-20 {
+    font-size: 20;
+}
+
+.font-16 {
+    font-size: 16;
+}
+
+.font-14 {
+    font-size: 14;
+}
+
+.font-12 {
+    font-size: 12;
+}
+
+.font-10 {
+    font-size: 10;
+}
+
+.font-8 {
+    font-size: 8;
+}
+
+.arrowOnListRow {
+    font-size: 26;
+    text-align: right;
+    margin-top: 20pt;
+    margin-right: 10pt;
+    width: 70;
+    height: 100%;
+}
+
+.circleBorderLabel {
+    margin-top: 10;
+    margin-bottom: 10;
+    margin-left: 10;
+    width: 40;
+    height: 40;
+    border-radius: 20;
+    border-width: 1;
+    border-color: gray;
+    font-size: 26;
+    text-align: center;
+}
+
+.circle-border-label-item {
+    width: 30;
+    height: 30;
+    border-radius: 50;
+    border-width: 1;
+    border-color: lightgray;
+    color: lightgray;
+    font-size: 16;
+    text-align: center;
+}
+
+.circleLargeGreenLabel {
+    width: 200;
+    height: 200;
+    border-radius: 100;
+    border-width: 4;
+    border-color: $merx-color-4;
+    color: $merx-color-4;
+    font-size: 150;
+    text-align: center;
+}
+
+.circleSmallGreenLabel {
+    color: $merx-color-4;
+    font-size: 100;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.blue-border{
+    border-color: #0085ef;
+    border-width: 0.5;
+}
+
+.list-item {
+    padding: 10 5 10 5;
+}
+
+.grid-list-item {
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.grey-border {
+    border-color: #F4F4F4; //#dbdbdb;
+    border-width: 1;
+    background-color: #fff;
+}
+
+.grey-hollow-panel {
+    border-color: #F4F4F4;
+    border-width: 1;
+    background-color: #F4F4F4;
+}
+
+.hr2 {
+    border-bottom-color: #aaa;
+    border-bottom-width: 1;
+}
+
+.dark-grey-border {
+    border-top-width: 1px;
+    border-top-color: #979797;
+    border-top-style: solid;
+
+    border-bottom-width: 1px;
+    border-bottom-color: #979797;
+    border-bottom-style: solid;
+
+    background-color: white;
+}
+
+.circular-border {
+    width: 35;
+    height: 35;
+    border-radius: 20;
+    border-width: 1;
+    border-color: #979797;
+    font-size: 10px;
+}
+
+.circular-border-2 {
+    width: 20;
+    height: 20;
+    border-radius: 50%;
+    color: white;
+    font-size: 8;
+    font-weight: 600;
+}
+
+.circular-border-q {
+    width: 40;
+    height: 40;
+    border-radius: 20;
+    color: white;
+    font-size: 14;
+    font-weight: 800;
+}
+
+
+
+.circular-border-timesheet {
+    border-radius: 20;
+    color: white;
+    font-weight: 900;
+}
+
+.task-bg {
+    background-color: DarkTurquoise;
+}
+
+.image-bg {
+    background-color: black;
+}
+
+.visitstarttask-bg {
+    background-color: PaleTurquoise;
+}
+
+.distancetask-bg {
+    background-color: LightCoral;
+}
+
+.visit-bg {
+    background-color: rgb(114, 179, 143);
+}
+
+.route-bg {
+    background-color: mediumpurple;
+}
+
+.primary-bg {
+    background-color: #1A237E;
+}
+
+.pill {
+
+    border-radius: 50%;
+    height:24;
+    width:24;
+    text-align: center;
+}
+
+.small-pill {
+    @extend .pill;
+    height: 12;
+    width: 12;
+}
+
+.pill Label {
+    font-size: 11;
+    font-weight: bold;
+}
+
+.alert {
+    border-radius: 50;
+    padding: 7px;
+    color: white;
+    font-weight: 700;
+}
+
+.action-item {
+    border-radius: 50;
+    color: white;
+    font-weight: 500;
+}
+
+.alert-alt {
+    border-radius: 20;
+    color: white;
+    font-weight: 700;
+}
+
+.alert-light {
+    border-radius: 20;
+    padding: 10px;
+    color: white;
+}
+
+.alert-failed {
+    background-color: #d0021b;
+}
+
+.alert-pending {
+    background-color: #0085ef;
+}
+
+.alert-uploading {
+    background-color: orange;
+}
+
+.test {
+    tab-text-color: white;
+    selected-tab-text-color: #0085ef;
+    selected-tab-background-color: white;
+    selected-tab-highlight-color: white;
+    tab-background-color: #0085ef;
+}
+
+
+.badge {
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #cccccc;
+}
+
+.failure {
+    color: #d0021b;
+
+}
+
+.success {
+    color: #51B859;
+}
+
+.failure-bg {
+    background-color: #ff4652;
+}
+
+.success-bg {
+    background-color: #51B859;
+}
+
+.border-right-basic {
+    border-right-color: #979797;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.border-left-basic {
+    border-left-color: #979797;
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+
+.border-top-basic {
+    border-top-color: #979797;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.border-bottom-basic {
+    border-bottom-color: #979797;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.border-bottom-light-gray {
+    border-bottom-color: #f4f4f4;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.avail-time-stamp {
+    font-size: 10pt;
+    text-align: center;
+    border-top-color: #666666;
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.schedule-day-time-stamp {
+    font-size: 14pt;
+    text-align: center;
+}
+
+.taskListCritical {
+    border-left-color: #d0021b;
+    border-left-width: 20px;
+    border-left-style: solid;
+}
+
+.dashboard-bg {
+    border-top-color: #1A237E;
+    border-top-width: 35%;
+    border-top-style: solid;
+}
+
+.btn-dashboard {
+    background-color: #0085ef;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 5%;
+}
+
+.btn-dashboard-inverse {
+    background-color: white;
+    color: #0085ef;
+    border-style: solid;
+    border-width: 1;
+    border-color: #0085ef;
+    border-radius: 5%;
+}
+
+.btn-sharp-main {
+    border-radius: 0%;
+    background-color: #0085ef;
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 0.1;
+    border-color: rgba(63,97,181,0);
+    margin: 0px;
+}
+
+.btn-sharp-disabled {
+    border-radius: 0%;
+    background-color: #aaa;
+    color: #555;
+    border-style: solid;
+    border-width: 0.1;
+    border-color: rgba(63,97,181,0);
+    margin: 0px;
+}
+
+.btn-sharp-sub {
+    border-radius: 0%;
+    border-style: solid;
+    color: #0085ef;
+    border-width: 0.1;
+    border-color: rgba(63,97,181,0);
+    margin: 0px;
+}
+
+.selected-btn {
+    background-color: #0085ef;
+    border-color: #0085ef;
+    color: white;
+}
+
+.unselected-btn {
+    background-color: #505050;
+    border-color: #505050;
+    color: white;
+}
+
+
+//Loging screen tansition code
+.margin-bottom-50 {
+    margin-bottom:50
+}
+
+.text-style{
+    font-family: Roboto;
+}
+
+.textfield {
+    color:#505050;
+    border-bottom-width:2;
+    border-bottom-color:#0085ef
+}
+
+.textfield-grey {
+    color:#505050;
+    border-bottom-width:1;
+    border-bottom-color:#a5a4a4
+}
+
+.deleteSwipe {
+    background-color: red;
+    color: white;
+}
+
+.red {
+    color: #ff4652;
+}
+
+.red-bg {
+    background-color: #ff4652;
+}
+
+//Base page
+.drawerContentText{font-size:13;padding:10}
+.drawerContentButton{margin:10;horizontal-align:left}
+.sideStackLayout{background-color:gray}
+.sideTitleStackLayout{height:56;text-align:center;vertical-align:center}
+.sideLabel{margin-left: 5; margin-right: 5; margin-top: 10; margin-bottom: 10;}
+.sideLightGrayLabel{background-color:lightgray}
+
+
+.round {
+    @extend .text-center;
+    @extend .mdi;
+
+    font-size: 24pt;
+    border-radius:100;
+    height:48pt;
+    width:48pt;
+
+}
+
+.round-confirm {
+
+    background-color:$merx-color-4;
+    color:white;
+    font-size: 12px;
+    border-radius:25;
+
+}
+
+.round-back {
+    @extend .label-primary;
+
+    font-size: 12px;
+    border-radius:25;
+}
+
+.round-disabled {
+    background-color: #aaa;
+    color: #555;
+
+    font-size: 12px;
+    border-radius:25;
+}
+
+.timesheet-dashboard-summary {
+    padding: 10;
+    margin: 5;
+    border-radius: 5;
+}
+
+.monochrome-0 {
+    background-color: #1a237e;
+}
+
+.monochrome-1 {
+    background-color: #0085ef;
+}
+
+.monochrome-2 {
+    background-color: #85b0ed;
+}
+
+.monochrome-3 {
+    background-color: #dae9ff;
+}
+
+.monochrome-4 {
+    background-color: transparent;
+    border-width: 1px ;
+
+    border-left-color: #0085ef;
+    border-right-color: #0085ef;
+    border-top-color: #0085ef;
+    border-bottom-color: #0085ef;
+
+    padding: 10;
+    margin: 5;
+    border-radius: 5;
+}
+
+.monochrome-5 {
+    color: #00adef;
+}
+
+.monochrome-0-text {
+    color: #1a237e;
+}
+
+.monochrome-1-text {
+    color: #0085ef;
+}
+
+.monochrome-2-text {
+    color: #85b0ed;
+}
+
+.monochrome-3-text {
+    color: #dae9ff;
+}
+
+.android-btn {
+    border-color: transparent;
+    border-width: 0;
+}
+
+.android-txt {
+    border-color: transparent;
+    border-width: 0;
+}
+
+.border-bottom-text-field {
+    border-color: #0085ef;
+    border-width: 0 0 1 0;
+}
+
+
+
+.chat-message textarea {
+	border: 1px solid #4576b6;
+	resize: none
+}
+
+.chat-message button {
+	float: right;
+	color: #f2f5f8;
+	font-size: 16px;
+	height: 52px;
+	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	background: #4576b6;
+	border: 1px solid #4576b6
+}
+
+.chat-message button:hover {
+	color: #dbe3ec
+}
+
+.chat-history {
+}
+
+.chat-history .row {
+    margin-bottom: 10px;
+}
+
+.chat-history .message-data-name {
+    font-size: 9px;
+    color: #777;
+}
+
+.chat-history .message-data-time {
+    font-size: 7px;
+	color: #aaa;
+}
+
+.chat-history .message {
+	color: white;
+    border-radius: 7px;
+    padding: 10px;
+    width: 66%
+}
+
+.chat-history .my-message {
+	background: #4576b6
+}
+
+.chat-history .other-message {
+	background: #7b7c7e
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0
+}
+
+.preview {
+	text-align: center;
+	font-size: 10px;
+	color: #626364
+}
+
+.blue-border {
+    border: 1px solid #4576b6;
+}
+
+.transparent-bg {
+    background-color: rgba(69,118,182, 0.2);
+}
+
+.taskItem {
+    padding: 8;
+    margin-left: 8;
+    margin-right: 8;
+    margin-top: 8;
+    border-radius: 5;
+    border-left-style: solid;
+    border-left-width: 10px;
+}
+
+.list-item-text > Label {
+    color: $text;
+}
+
+.disabled-list-item-text > Label {
+    color: $disabled-text
+}
+
+.btn-gradient-primary {
+    background: linear-gradient(90deg, #123597 0%,   #97ABFF 10%);
+}
+
+.btn-gradient-success {
+    background: linear-gradient(90deg, $merx-color-1, #a48be1);
+    border-radius: 5;
+}
+
+
+.action-button {
+    padding: 10;
+    margin: 5;
+    border-radius: 5;
+    color: white;
+}
+
+.lightblue-grad {
+    background: linear-gradient(#0085ef 40%,   #00adef 100%);
+}
+
+.success-bg-gradient {
+    // background: linear-gradient(#0085ef 40%,   #00adef);
+    background-color: #0085ef;
+    color: white;
+
+
+    // border-width: 10px;
+
+    // border-left-color: #00ef42;
+    // border-right-color: #00ef42;
+    // border-top-color: #00ef42;
+    // border-bottom-color: #00ef42;
+    // color: white;
+}
+
+.menu {
+    border-style: solid;
+    border-color: #666;
+    border-top-width: 1px;
+    border-top: #666;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    background-color: #eee;
+    padding-top: 5px;
+}
+
+.simple-border {
+    border-right-color: #EEE;
+    border-right-style: solid;
+    border-right-width: 1px;
+
+    border-left-color: #EEE;
+    border-left-style: solid;
+    border-left-width: 1px;
+
+    border-top-color: #EEE;
+    border-top-style: solid;
+    border-top-width: 1px;
+
+    border-bottom-color: #EEE;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+
+    border-radius: 5px;
+    background-color: #EEE;
+}
+
+.simple-border2 {
+    border-right-style: solid;
+    border-right-width: 1px;
+
+    border-left-style: solid;
+    border-left-width: 1px;
+
+    border-top-style: solid;
+    border-top-width: 1px;
+
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.pill {
+    color: white;
+    border-radius: 25%;
+    font-size: 8pt;
+    padding: 4;
+}
+
+.status {
+    color: white;
+    // text-transform: uppercase;
+    font-weight: 600;
+    padding: 4;
+    border-radius: 25%
+}
+
+// created
+.visit-status-0,
+.task-status-0 {
+    background-color: #0085ef;
+}
+
+// assigned and rescheduled
+.visit-status-1,
+.task-status-1,
+.task-status-7,
+.task-status-8  {
+    background-color: #D5BC34;
+}
+
+// in progress
+.visit-status-2,
+.task-status-2  {
+    background-color: #0085ef;
+}
+
+// completed
+.visit-status-3,
+.task-status-3,
+.task-status-4 {
+    background-color: $merx-color-4;
+}
+
+// cancelled and error
+.visit-status-4,
+.visit-status-5,
+.task-status-5,
+.task-status-6 {
+    background-color: #F54F4F;
+}
+
+// my overdue
+.extra-work-status-0 {
+    background-color: #F54F4F;
+}
+
+// unassigned overdue
+.extra-work-status-1 {
+    background-color: #D5BC34;
+}
+
+// future
+.extra-work-status-2 {
+    background-color: #0085ef;
+}
+
+// my future
+.extra-work-status-3 {
+    background-color: $merx-color-4;
+}
+
+
+.merx-button {
+    text-align: center;
+    border-radius: 4;
+    border-width: 1;
+    padding: 14;
+    font-size: 12pt;
+    text-transform: capitalize;
+    z-index: 0;
+}
+
+a:disabled, button:disabled {
+    background-color: $disabled-bg-color;
+    color: $disabled-fg-color;
+    border-color: $primary-fg-color;
+}
+
+.primary-button {
+    @extend .merx-button;
+    color: $primary-fg-color;
+    border-color: $primary-bg-color;
+    background-color:$primary-bg-color;
+}
+
+.success-button {
+    @extend .merx-button;
+    color: $primary-fg-color;
+    border-color: $merx-color-4;
+    background-color:$merx-color-4 ;
+}
+
+.primary-grid-button {
+    @extend .primary-button;
+    border-radius: 0%;
+}
+
+.unselected-primary-button {
+    @extend .merx-button;
+    background-color: $disabled-bg-color;
+    color: $disabled-fg-color;
+}
+
+.primary-button-disabled {
+    @extend .unselected-primary-button;
+    opacity: 0.3;
+}
+
+.secondary-button {
+    @extend .merx-button;
+    color: $primary-bg-color;
+    border-color: #E8E8EB;
+    background-color: #eee;
+}
+
+.secondary-grid-button {
+    @extend .secondary-button;
+    border-radius: 5%;
+}
+
+.secondary-button-disabled {
+    @extend .primary-button-disabled;
+}
+
+.tertiary-button {
+    @extend .merx-button;
+
+    color: $tetradic1-fg-color;
+    border-color: $tetradic1-bg-color;
+    background-color: $tetradic1-bg-color;
+}
+
+.tertiary-grid-button {
+    @extend .tertiary-button;
+    border-radius: 0%;
+}
+
+.left-radius {
+    border-top-left-radius: 5%;
+    border-bottom-left-radius: 5%;
+}
+
+.right-radius {
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+.selected-item {
+    background-color: $tetradic4-bg-color;
+    border-color: $tetradic4-bg-color;
+    border-width: 1;
+    color: $tetradic4-fg-color;
+    padding-top: 14;
+    padding-bottom: 14;
+}
+
+.unselected-item {
+    border-width: 1;
+    color: $primary-bg-color;
+    border-color: #E8E8EB;
+    background-color: #eee;
+    padding-top: 14;
+    padding-bottom: 14;
+}
+
+.todo-action-item {
+    text-align: center;
+    font-weight:bold;
+    padding-top: 14;
+    padding-bottom: 14;
+    color: white;
+}
+
+.action-bar-item {
+    color: $primary-fg-color;
+    background-color: $header-bg-color;
+    border: 0px;
+    border-color: $header-bg-color;
+    padding: 5;
+    z-index: 0;
+}
+
+.dialog-bar-item {
+    color: black;
+    background-color: transparent;
+    border: 0px;
+    border-color: transparent;
+    padding: 5;
+    z-index: 0;
+}
+
+.info-header {
+    background-color: $disabled-fg-color;
+    padding:5;
+}
+
+.info-header-bg {
+    background-color: $disabled-fg-color;
+}
+
+.info-header Label {
+    color: $disabled-bg-color;
+    padding: 5;
+}
+
+.info-header-2 {
+    background-color: $analogous3-bg-color;
+
+}
+
+.info-header-2 Label {
+    color: $analogous3-fg-color;
+}
+
+.alert-header {
+    background-color: $split3-bg-color;
+}
+
+.alert-header Label {
+    color: $split3-fg-color;
+    font-size: 9;
+}
+
+.table-header {
+    background-color: $disabled-bg-color;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    //border-bottom-color: $disabled-fg-color;
+    //border-bottom-width: 1;
+}
+
+.table-row {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+.table-row-odd {
+    @extend .table-row;
+    background-color: white;//#f7f8fa;
+}
+
+.table-cell {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.table-header-cell {
+    @extend .table-cell;
+    color: $disabled-fg-color;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.timer-fg {
+    color: $split3-bg-color;
+}
+
+.timer-fg-2 {
+    color: $tetradic1-bg-color;
+}
+
+.timer-bg {
+    padding: 10 5 10 5;
+    background: #000;
+}
+
+.list {
+    margin: 5 5 5 5;
+}
+
+/*
+.required {}
+
+.not-required {}
+*/
+
+.rounded {
+    border-radius: 5%;
+}
+
+
+.skeleton {
+    height: 200px;
+    animation-name: skeletonShimmer;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes skeletonShimmer {
+    0% {
+        background-color: #ddd;
+    }
+    50% {
+        background-color: #ccc;
+    }
+    100% {
+        background-color: #ddd;
+    }
+}
+
+.todo-status-open {
+    background-color: $merx-color-2;
+}
+
+.todo-status-inprogress {
+    background-color: $merx-color-2;
+}
+
+// DO NOT REMOVE: this ensures that charts work for some reason.
+DonutSeries {
+    font-size: 9;
+}
