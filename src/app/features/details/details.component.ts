@@ -1,6 +1,5 @@
 import {Component, ElementRef, HostListener, ViewChild} from "@angular/core";
 import {ObservableArray} from "@nativescript/core";
-import {RadListView} from "nativescript-ui-listview";
 import {Label} from "@nativescript/core";
 
 
@@ -11,7 +10,6 @@ import {Label} from "@nativescript/core";
 })
 export class DetailsComponent {
   _dataItems: any;
-  @ViewChild('radListViewComponent', { static: false }) radListView: ElementRef<RadListView>;
   @ViewChild('label2', {static: false}) label2: ElementRef<Label>;
   @ViewChild('label1', {static: false}) label1: ElementRef<Label>;
   groupingFunction: (item: any) => string = (item: any) => {
@@ -36,16 +34,6 @@ export class DetailsComponent {
   }
   @HostListener('unloaded')
   destroy() {
-
     console.log('Destroy details view');
-    this.radListView.nativeElement
-      .removeEventListener(RadListView.itemLoadingEvent +"," +
-        RadListView.loadedEvent +","+
-        RadListView.loadMoreDataRequestedEvent
-      );
-    this.radListView.nativeElement.disposeNativeView();
-    this.label1.nativeElement.disposeNativeView();
-    this.label2.nativeElement.disposeNativeView();
-
   }
 }
