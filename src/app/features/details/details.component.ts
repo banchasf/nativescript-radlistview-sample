@@ -14,6 +14,9 @@ export class DetailsComponent {
   @ViewChild('radListViewComponent', { static: false }) radListView: ElementRef<RadListView>;
   @ViewChild('label2', {static: false}) label2: ElementRef<Label>;
   @ViewChild('label1', {static: false}) label1: ElementRef<Label>;
+  groupingFunction: (item: any) => string = (item: any) => {
+    return item.name;
+  };
 
   get dataItems(): ObservableArray<any> {
     return this._dataItems;

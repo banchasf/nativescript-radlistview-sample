@@ -2,12 +2,22 @@
 
 <GridLayout height="100%">
 
-            <RadListView #radListViewComponent [autoReuseViews]="true" [items]="dataItems">
+            <RadListView #radListViewComponent
+                         [autoReuseViews]="true"
+                         [items]="dataItems"
+                         [groupingFunction]="groupingFunction"
+            >
                 <ng-template tkListItemTemplate let-item="item">
                     <GridLayout>
                         <Label textAlignment="left" #label1 class="nameLabel" [text]="item.name"></Label>
                         <Label textAlignment="right" #label2 class="descriptionLabel" [text]="item.description"></Label>
                     </GridLayout>
                 </ng-template>
+                <ng-template tkGroupTemplate let-category="category">
+                    <GridLayout ios:height="50">
+                        <Label [text]="category"></Label>
+                    </GridLayout>
+                </ng-template>
+
             </RadListView>
 </GridLayout>
